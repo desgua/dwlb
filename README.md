@@ -36,7 +36,7 @@ while :; do
 done
 ```
 don't forget to make it executable `chmod +x /path/to/dwlb_wrapper.sh` and launch dwl with:
-dwl -s '/path/to/dwlb_wrapper.sh'
+`dwl -s '/path/to/dwlb_wrapper.sh'`
 
 ## Ipc
 If dwl is [patched](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/ipc) appropriately, dwlb is capable of communicating directly with dwl. When ipc is enabled with `-ipc`, dwlb does not read from stdin, and clicking tags functions as you would expect. Ipc can be disabled with `-no-ipc`.
