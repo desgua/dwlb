@@ -48,13 +48,6 @@ The `-status` and `-title` commands are used to write status text. The text may 
 
 A color command with no argument reverts to the default value. `^^` represents a single `^` character. Status commands can be disabled with `-no-status-commands`.
 
-## Scaling
-If you use scaling in Wayland, you can specify `buffer_scale` through config file or by passing it as an option (only integer values):
-```bash
-dwlb -scale 2
-```
-This will render both surface and a cursor with 2x detail. If your monitor is set to 1.25 or 1.5 scaling, setting scale to 2 will also work as compositor will downscale the buffer properly.
-
 ## Other Options
 usage: dwlb [OPTIONS]
 
