@@ -15,7 +15,7 @@ A fast, feature-complete bar for [dwl](https://github.com/djpohly/dwl).
 ## Installation
 This branch is a stripped down fork from https://github.com/kolunmi/dwlb focused on performance, simplicity and usability.
 ```bash
-git clone https://github.com/desgua/dwlb/tree/stripped
+git clone --branch stripped https://github.com/desgua/dwlb.git
 cd dwlb
 make
 make install
