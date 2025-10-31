@@ -112,8 +112,10 @@ usage: dwlb [OPTIONS]
 | ------ | ----------------------- |
 | `-v`   | Get version information |
 
-``` Example:
+``` 
+Example usage:
 dwlb -printfocused eDP-1
+dwlb -status eDP-1 "Hello World"
 ```
 
 ## Someblocks
