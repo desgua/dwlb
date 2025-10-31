@@ -58,56 +58,63 @@ This will render both surface and a cursor with 2x detail. If your monitor is se
 ## Other Options
 usage: dwlb [OPTIONS]
 
-| In-Line Command        | Description                                                                 |
-|------------------------|-----------------------------------------------------------------------------|
-| # Bar Config           |
-|
-| -hidden			     | bars will initially be hidden
-| -no-hidden		     | bars will not initially be hidden
-| -bottom			     | bars will initially be drawn at the bottom
-| -no-bottom		     | bars will initially be drawn at the top
-| -hide-vacant-tags	     | do not display empty and inactive tags
-| -no-hide-vacant-tags   | display empty and inactive tags
-| -status-commands	     | enable in-line commands in status text
-| -no-status-commands    | disable in-line commands in status text
-| -center-title		     | center title text on bar
-| -no-center-title       | do not center title text on bar
-| -custom-title		     | do not display window title and treat the area as another status text element; see -title command
-| -no-custom-title	     | display current window title as normal
-| -active-color-title    | title colors will use active colors
-| -no-active-color-title | title colors will use inactive colors
-| -font [FONT]		     | specify a font
-| -tags [NUMBER] [FIRST]...[LAST]	if ipc is disabled, specify custom tag names. If NUMBER is 0, then no tag names should be given 
-| -vertical-padding [PIXELS]	specify vertical pixel padding above and below text
-| -active-fg-color [COLOR]	specify text color of active tags or monitors
-| -active-bg-color [COLOR]	specify background color of active tags or monitors
-| -occupied-fg-color [COLOR]	specify text color of occupied tags
-| -occupied-bg-color [COLOR]	specify background color of occupied tags
-| -inactive-fg-color [COLOR]	specify text color of inactive tags or monitors
-| -inactive-bg-color [COLOR]	specify background color of inactive tags or monitors
-| -urgent-fg-color [COLOR]	specify text color of urgent tags
-| -urgent-bg-color [COLOR]	specify background color of urgent tags
-| -middle-bg-color [COLOR]	specify background color of the color in the middle of the bar
-| -middle-bg-color-selected [COLOR]	specify background color of the color in the middle of the bar, when selected
-| -scale [BUFFER_SCALE]		specify buffer scale value for integer scaling
+| In-Line Command                     | Description                                                                                         |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `# Bar Config`                      |                                                                                                     |
+| `-hidden`                           | Bars will initially be hidden                                                                       |
+| `-no-hidden`                        | Bars will not initially be hidden                                                                   |
+| `-bottom`                           | Bars will initially be drawn at the bottom                                                          |
+| `-no-bottom`                        | Bars will initially be drawn at the top                                                             |
+| `-hide-vacant-tags`                 | Do not display empty and inactive tags                                                              |
+| `-no-hide-vacant-tags`              | Display empty and inactive tags                                                                     |
+| `-status-commands`                  | Enable in-line commands in status text                                                              |
+| `-no-status-commands`               | Disable in-line commands in status text                                                             |
+| `-center-title`                     | Center title text on bar                                                                            |
+| `-no-center-title`                  | Do not center title text on bar                                                                     |
+| `-custom-title`                     | Do not display window title and treat the area as another status text element; see `-title` command |
+| `-no-custom-title`                  | Display current window title as normal                                                              |
+| `-active-color-title`               | Title colors will use active colors                                                                 |
+| `-no-active-color-title`            | Title colors will use inactive colors                                                               |
+| `-font [FONT]`                      | Specify a font                                                                                      |
+| `-tags [NUMBER] [FIRST]...[LAST]`   | If IPC is disabled, specify custom tag names. If NUMBER is 0, then no tag names should be given     |
+| `-vertical-padding [PIXELS]`        | Specify vertical pixel padding above and below text                                                 |
+| `-active-fg-color [COLOR]`          | Specify text color of active tags or monitors                                                       |
+| `-active-bg-color [COLOR]`          | Specify background color of active tags or monitors                                                 |
+| `-occupied-fg-color [COLOR]`        | Specify text color of occupied tags                                                                 |
+| `-occupied-bg-color [COLOR]`        | Specify background color of occupied tags                                                           |
+| `-inactive-fg-color [COLOR]`        | Specify text color of inactive tags or monitors                                                     |
+| `-inactive-bg-color [COLOR]`        | Specify background color of inactive tags or monitors                                               |
+| `-urgent-fg-color [COLOR]`          | Specify text color of urgent tags                                                                   |
+| `-urgent-bg-color [COLOR]`          | Specify background color of urgent tags                                                             |
+| `-middle-bg-color [COLOR]`          | Specify background color of the middle of the bar                                                   |
+| `-middle-bg-color-selected [COLOR]` | Specify background color of the middle of the bar when selected                                     |
+| `-scale [BUFFER_SCALE]`             | Specify buffer scale value for integer scaling                                                      |
 
-Commands
-	-target-socket [SOCKET-NAME]	set the socket to send command to. Sockets can be found in `$XDG_RUNTIME_DIR/dwlb/`
-	-status	[OUTPUT] [TEXT]		set status text
-	-status-stdin	[OUTPUT]		set status text from stdin
-	-title	[OUTPUT] [TEXT]		set title text, if -custom-title is enabled
-	-show [OUTPUT]			show bar
-	-hide [OUTPUT]			hide bar
-	-toggle-visibility [OUTPUT]	toggle bar visibility
-	-set-top [OUTPUT]		draw bar at the top
-	-set-bottom [OUTPUT]		draw bar at the bottom
-	-toggle-location [OUTPUT]	toggle bar location
-	-printfocused [OUTPUT]		print the title of focused window
-	-printtags [OUTPUT]		print the decimal representation of occupied tags
-Other
-	-v				get version information
 
-	Example: dwlb -printfocused eDP-1
+
+| Command                        | Description                                                                         |
+| ------------------------------ | ----------------------------------------------------------------------------------- |
+| `-target-socket [SOCKET-NAME]` | Set the socket to send command to. Sockets can be found in `$XDG_RUNTIME_DIR/dwlb/` |
+| `-status [OUTPUT] [TEXT]`      | Set status text                                                                     |
+| `-status-stdin [OUTPUT]`       | Set status text from stdin                                                          |
+| `-title [OUTPUT] [TEXT]`       | Set title text, if `-custom-title` is enabled                                       |
+| `-show [OUTPUT]`               | Show bar                                                                            |
+| `-hide [OUTPUT]`               | Hide bar                                                                            |
+| `-toggle-visibility [OUTPUT]`  | Toggle bar visibility                                                               |
+| `-set-top [OUTPUT]`            | Draw bar at the top                                                                 |
+| `-set-bottom [OUTPUT]`         | Draw bar at the bottom                                                              |
+| `-toggle-location [OUTPUT]`    | Toggle bar location                                                                 |
+| `-printfocused [OUTPUT]`       | Print the title of focused window                                                   |
+| `-printtags [OUTPUT]`          | Print the decimal representation of occupied tags                                   |
+
+
+| Option | Description             |
+| ------ | ----------------------- |
+| `-v`   | Get version information |
+
+``` Example:
+dwlb -printfocused eDP-1
+```
 
 ## Someblocks
 To use someblocks, or any program that outputs to stdout, with dwlb, use this one-liner:
